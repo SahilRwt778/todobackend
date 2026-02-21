@@ -1,4 +1,5 @@
-require("dotenv").config({path:"./config.env", quiet:true})
+require("dotenv").config({path:".env", quiet:true})
+
 
 const app = require("./app");
 const connectDB = require("./config/db");
@@ -8,5 +9,5 @@ connectDB();
 
 app.listen(port, (err)=>{
     if(err) throw err;
-    console.log("running")
+    
 })
