@@ -39,6 +39,12 @@ exports.updateTask=catchAsync(async(req,res,next)=>{
   res.status(200).json(todo);
 })
 
+exports.getSingleTask = catchAsync(async (req, res) => {
+  
+    const todo = await Todo.findById(req.params.id);
+    res.status(200).json(todo);
+  
+});
 
 exports.deleteTask=catchAsync(async(req,res,next)=>{
 
